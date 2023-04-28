@@ -1,0 +1,15 @@
+.hobby{
+    width:40vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.hobby__description{
+    display: flex;
+}
+.about__hobby{
+    width:70%;
+    background-color: aqua;
+    padding: 10px;
+}
