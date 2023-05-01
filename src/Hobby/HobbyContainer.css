@@ -1,15 +1,90 @@
 .hobby{
     width:40vw;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    width: 50%;
+    flex-direction: column;
 
 }
 .hobby__description{
     display: flex;
+    align-items: center;
+    gap:10px;
 }
 .about__hobby{
-    width:70%;
-    background-color: aqua;
     padding: 10px;
+    border-bottom: 1px solid rgb(80, 76, 76);
+}
+
+.hobby__creator {
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    
+}
+.hobby__creator> input{
+    width:50%;
+    height:40px;
+    outline: none;
+    font-size: 1.2rem;
+    padding:5px 10px;
+}
+.hobby__creator > button{
+    width:30%;
+    height:40px;
+    border-radius: 5px;
+    border: 1px solid rgb(209, 60, 60);
+    outline: none;
+    font-size: 1.3rem;
+    background-color: aliceblue;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s ease-out;
+}
+
+.hobby__creator > button:hover{
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+}
+
+.hobby__creator > button:active{
+    border: 1px solid red ;
+    letter-spacing: 2px;
+    transform: translateY(-5px);
+}
+
+.hobby__Description__text{
+    background-color: yellow;
+}
+
+.hobby__description__container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.hobby__description__container > input, .hobby__description__container > button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    width:60%;
+    height:30px;
+
+}
+.hobby__description__container > button{
+    width: 20%;
+    border:1px solid coral;
+}
+
+input[type="checkbox"]{
+    height:20px;
+    width:20px;
+    padding: px;
+    display: flex;
+}
+.hobby__description__word{
+    background-color: yellow;
+    margin-right: 10px;
 }

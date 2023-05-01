@@ -6,7 +6,6 @@ function HobbyContainer({hobby, setHobby}) {
 
     const checkBoxHandler = (i) =>{
 
-
        let newHobby = hobby.map(elem =>{
         if(elem.id ===i) elem.isActive = ! elem.isActive;
            return elem
@@ -22,9 +21,8 @@ function HobbyContainer({hobby, setHobby}) {
           <label htmlFor={i}><h1>{elem.hobby}</h1></label>
           </div>
         
-
         <div className="about__hobby">
-           {elem.isActive ? <InputField hobby ={hobby} setHobby ={setHobby} id={elem.id } hobbyTitle = {elem.hobby}/>   : elem.description}
+           {elem.isActive ? <InputField hobby ={hobby} setHobby ={setHobby} id={elem.id } hobbyTitle = {elem.hobby}/> : <span> <span className='hobby__description__word'>Description : </span>{ elem.description}</span>}
         </div>
 
         

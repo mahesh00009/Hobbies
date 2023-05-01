@@ -3,8 +3,8 @@ import HobbyContainer from './HobbyContainer';
 
 const HobbyCreator = () => {
 
-    let [hobby, setHobby] = useState([]);
-    let [currentHobby, setCurrentHobby] = useState({id:0, hobby:"", description:"hello" , isActive:false});
+    let [hobby, setHobby] = useState([{id:0, hobby:"Don't Dream", description:"A song by Sixpense None The Richer" , isActive:false}, {id:1, hobby:"Hello", description:"A song by Adele" , isActive:false}]);
+    let [currentHobby, setCurrentHobby] = useState({id:2, hobby:"", description:"No Description" , isActive:false});
     
     const CreateHobbyHandler = () =>{
 
@@ -18,7 +18,6 @@ const HobbyCreator = () => {
 
         setCurrentHobby({...newHobby, hobby:""})
         
-        console.log("created")
       }
     }
     console.log(hobby)
@@ -30,8 +29,8 @@ const HobbyCreator = () => {
 
 
   return (
-    <div>
-        <input type="text" onChange={hobbyHandler} value = {currentHobby.hobby}/>
+    <div  className="hobby__creator">
+        <input type="text" onChange={hobbyHandler} value = {currentHobby.hobby} placeholder='Enter Your Hobbies'/>
         <button onClick={CreateHobbyHandler}>Create</button>
 
         <HobbyContainer hobby={hobby} setHobby={setHobby} />
